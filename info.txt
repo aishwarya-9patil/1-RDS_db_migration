@@ -1,0 +1,32 @@
+#######################################################################
+Creating RDS using Terraform and migrating a database on EC2 to the RDS
+#######################################################################
+Prerequisites:
+1. Terraform installation
+2. AWS CLI installation 
+
+Steps:
+1. Create an EC2 instance and a security group to SSH 
+2. Create a module for secret manager to store the password 
+3. Create an RDS module 
+4. Apply the changes
+5. Install mysql on EC2 instance 
+6. Create a new database on the EC2 and create tables 
+7. Migrate these to RDS instance
+
+################################################################
+Downloading mysql on EC2 Amazon Linux 2023
+
+1. sudo wget https://dev.mysql.com/get/mysql80-community-release-el9-1.noarch.rpm 
+2. sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2023
+3. sudo dnf install mysql80-community-release-el9-1.noarch.rpm
+4. dnf repolist enabled | grep "mysql.*-community.*"
+5. sudo dnf install mysql-community-server
+6. sudo systemctl start mysqld
+
+plkfP<r#j8Vl
+Admin@123
+################################################################
+mysqldump -u root -p ec2db > db.sql 
+mysql -u admin -P 3306 -p mydatabase < db.sql 
+ 
