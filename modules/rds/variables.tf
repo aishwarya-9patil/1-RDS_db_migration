@@ -9,7 +9,7 @@ variable "ec2_sg" {
 
 variable "subnet_ids" {
   type = list(string)
-  default = [ "subnet-09caaf11453fcf182", "subnet-09caaf11453fcf182" ]
+  default = [ "subnet-00774a22a4102132e", "subnet-0233085b0ed2df1ba" ]
 }
 
 variable "allocated_storage" {
