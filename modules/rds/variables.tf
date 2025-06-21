@@ -1,6 +1,6 @@
 variable "rds_vpc" {
   type = string
-  default = "vpc-051c79ef4f13b9d1a"
+  default = "vpc-078f0207aafc7071b"
 }
 
 variable "ec2_sg" {
@@ -9,7 +9,7 @@ variable "ec2_sg" {
 
 variable "subnet_ids" {
   type = list(string)
-  default = [ "subnet-023f76c7148cae5f9", "subnet-090a0007356f21f30" ]
+  default = [ "subnet-09caaf11453fcf182", "subnet-09caaf11453fcf182" ]
 }
 
 variable "allocated_storage" {
