@@ -1,3 +1,3 @@
 variable "password" {
   type = string
-}
+} 
